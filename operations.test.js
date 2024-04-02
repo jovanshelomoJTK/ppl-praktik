@@ -47,4 +47,14 @@ describe('Test divide function', () => {
     test('divide 6 / 2 to equal 3', () => {
         expect(divide(6, 2)).toBe(3);
     });
+
+    test('divide 0 / 123 to equal 0', () => {
+        expect(divide(0, 123)).toBe(0);
+    });
+
+    test('divide 123 / 0 to throw an error', () => {
+        expect(() => {
+            divide(123, 0)
+        }).toThrowError('Tidak bisa membagi dengan 0');
+    });
 });

@@ -24,11 +24,27 @@ describe('Test calculate function', () => {
         }).toThrowError('Tidak bisa membagi dengan 0');
     });
 
-    test('calculate 6 / "a" to equal "Variable bukan angka!"', () => {
-        expect(calculate(6, 'a', '/')).toBe('Variable bukan angka!');
+    test('calculate 123 + "a" to throw an error', () => {
+        expect(() => {
+            calculate(123, 'a', '+')
+        }).toThrowError('Variable a atau b bukan angka!');
     });
 
-    test('calculate 6 "a" 2 to equal "Operator tidak dikenal"', () => {
-        expect(calculate(6, 2, 'a')).toBe('Operator tidak dikenal');
+    test('calculate 32768 + 1 to throw an error', () => {
+        expect(() => {
+            calculate(32768, 1, '+')
+        }).toThrowError('Variable diluar range!');
+    });
+
+    test('calculate 123 "//" 456 to throw an error', () => {
+        expect(() => {
+            calculate(123, 456, '//')
+        }).toThrowError('Operator Salah! (Harus +, -, *, /)');
+    });
+
+    test('calculate 123 "a" 456 to throw an error', () => {
+        expect(() => {
+            calculate(123, 456, 'a')
+        }).toThrowError('Operator Salah! (Harus +, -, *, /)');
     });
 });

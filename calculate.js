@@ -3,10 +3,10 @@ import { add, subtract, multiply, divide } from './operations.js'
 
 export function calculate(a, b, operator) {
     if (typeof a !== "number" || typeof b !== "number") {
-        return "Variable bukan angka!"
+        throw new Error("Variable a atau b bukan angka!");
     }
-    if (a < 32768 || a > 32767 || b < 32768 || b > 32767) {
-        return "Variable diluar range!"
+    if (a < -32768 || a > 32767 || b < -32768 || b > 32767) {
+        throw new Error("Variable diluar range!");
     }
 
     switch (operator) {
@@ -19,6 +19,6 @@ export function calculate(a, b, operator) {
         case "/":
             return divide(a, b);
         default:
-            return "Operator Salah! (Harus +, -, *, /)"
+            throw new Error("Operator Salah! (Harus +, -, *, /)");
     }
 }

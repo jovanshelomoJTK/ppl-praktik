@@ -12,7 +12,7 @@ export function multiply(a, b) {
 
 export function divide(a, b) {
     if (b === 0) {
-        throw new Error("Tidak bisa membagi dengan 0")
+        throw new Error("Tidak bisa membagi dengan 0!")
     }
     return a / b
 }
