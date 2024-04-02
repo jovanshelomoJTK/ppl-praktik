@@ -1,0 +1,15 @@
+{
+  "name": "tessss",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
