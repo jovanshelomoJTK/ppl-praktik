@@ -36,6 +36,12 @@ describe('Test calculate function', () => {
         }).toThrowError('Variable diluar range!');
     });
 
+    test('calculate 1 + 32768 to throw an error', () => {
+        expect(() => {
+            calculate(1, 32768, '+')
+        }).toThrowError('Variable diluar range!');
+    });
+
     test('calculate 123 "//" 456 to throw an error', () => {
         expect(() => {
             calculate(123, 456, '//')
