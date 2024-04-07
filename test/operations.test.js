@@ -1,4 +1,4 @@
-import { add, divide, multiply, subtract } from './operations.js'
+import { add, divide, multiply, subtract } from '../src/operations.js'
 import { expect, test } from '@jest/globals';
 
 describe('Test add function', () => {

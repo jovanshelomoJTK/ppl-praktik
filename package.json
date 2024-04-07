@@ -4,10 +4,11 @@
   "type": "module",
   "scripts": {
     "start": "node ./index.js",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --json --outputFile=test-results.json"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "jest-html-reporters": "^3.1.7"
   },
   "dependencies": {
     "cross-env": "^7.0.3"

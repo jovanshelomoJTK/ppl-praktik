@@ -1,4 +1,4 @@
-import { calculate } from './calculate.js';
+import { calculate } from '../src/calculate.js';
 import { expect, test } from '@jest/globals';
 
 describe('Test calculate function', () => {
