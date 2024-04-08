@@ -4,11 +4,14 @@
   "type": "module",
   "scripts": {
     "start": "node ./index.js",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --json --outputFile=test-results.json"
+    "test": "concurrently \"npx vitest\" \"npx vite preview --outDir html\""
   },
   "devDependencies": {
-    "jest": "^29.7.0",
-    "jest-html-reporters": "^3.1.7"
+    "@vitest/coverage-v8": "^1.4.0",
+    "@vitest/ui": "^1.4.0",
+    "concurrently": "^8.2.2",
+    "deep-clone-fn": "^1.1.0",
+    "vitest": "^1.4.0"
   },
   "dependencies": {
     "cross-env": "^7.0.3"

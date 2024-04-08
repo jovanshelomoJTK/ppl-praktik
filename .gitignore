@@ -1,4 +1,4 @@
 node_modules
-coverage-report
-html-report
 test-results.json
+test-results.xml
+html
