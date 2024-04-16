@@ -15,7 +15,7 @@ Batasan:
 
 - Operasi-operasi yang dapat dilakukan: +, -, \*, /
 - Input hanya menerima angka dengan range dari -32768 hingga 32767 (inklusif).
-- Operasi pembagian tidak dapat menerima input 0.
+- Operasi pembagian tidak dapat menerima input 0 sebagai pembagi.
 
 ## Anggota Kelompok
 
