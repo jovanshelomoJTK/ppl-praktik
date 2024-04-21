@@ -16,7 +16,7 @@ function initiateStdin(inputs) {
     });
 }
 
-describe('main', () => {
+describe('Test main function', () => {
     let mockStdout = null;
     beforeEach(() => {
         mockStdout = vi.spyOn(process.stdout, 'write').mockImplementation(() => true);
@@ -26,7 +26,7 @@ describe('main', () => {
         vi.restoreAllMocks();
     });
 
-    it('should correctly process input and output', async () => {
+    it('Calculate tidak menghasilkan error', async () => {
         const inputs = ['5', '4', '+'];
         const output = '9';
 
@@ -42,7 +42,7 @@ describe('main', () => {
         expect(mockStdout).toHaveBeenNthCalledWith(4, 'hasil: ' + output + '\n');
     });
 
-    it('should handle error correctly', async () => {
+    it('Calculate menghasilkan error', async () => {
         const inputs = ['5', '0', '/'];
         const output = 'Tidak bisa membagi dengan 0!';
 
