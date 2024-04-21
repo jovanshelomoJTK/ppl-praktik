@@ -35,11 +35,11 @@ describe('main', () => {
 
         await main();
 
-        expect(mockStdout).toHaveBeenCalledWith('Masukkan angka pertama: ');
-        expect(mockStdout).toHaveBeenCalledWith('Masukkan angka kedua: ');
-        expect(mockStdout).toHaveBeenCalledWith('Masukkan operator (+, -, *, /): ');
+        expect(mockStdout).toHaveBeenNthCalledWith(1, 'Masukkan angka pertama: ');
+        expect(mockStdout).toHaveBeenNthCalledWith(2, 'Masukkan angka kedua: ');
+        expect(mockStdout).toHaveBeenNthCalledWith(3, 'Masukkan operator (+, -, *, /): ');
         expect(calculate).toHaveBeenCalledWith(...inputs);
-        expect(mockStdout).toHaveBeenCalledWith('hasil: ' + output + '\n');
+        expect(mockStdout).toHaveBeenNthCalledWith(4, 'hasil: ' + output + '\n');
     });
 
     it('should handle error correctly', async () => {
@@ -53,10 +53,10 @@ describe('main', () => {
 
         await main();
 
-        expect(mockStdout).toHaveBeenCalledWith('Masukkan angka pertama: ');
-        expect(mockStdout).toHaveBeenCalledWith('Masukkan angka kedua: ');
-        expect(mockStdout).toHaveBeenCalledWith('Masukkan operator (+, -, *, /): ');
+        expect(mockStdout).toHaveBeenNthCalledWith(1, 'Masukkan angka pertama: ');
+        expect(mockStdout).toHaveBeenNthCalledWith(2, 'Masukkan angka kedua: ');
+        expect(mockStdout).toHaveBeenNthCalledWith(3, 'Masukkan operator (+, -, *, /): ');
         expect(calculate).toHaveBeenCalledWith(...inputs);
-        expect(mockStdout).toHaveBeenCalledWith(output + '\n');
+        expect(mockStdout).toHaveBeenNthCalledWith(4, output + '\n');
     });
 });

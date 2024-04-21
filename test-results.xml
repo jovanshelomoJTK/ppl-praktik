@@ -1,37 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="24" failures="0" errors="0" time="0.594">
-    <testsuite name="test/calculate.test.js" timestamp="2024-04-16T02:00:02.441Z" hostname="LAPTOP-AJA" tests="10" failures="0" errors="0" skipped="0" time="0.008">
+<testsuites name="vitest tests" tests="21" failures="0" errors="0" time="0.631">
+    <testsuite name="test/calculate.test.js" timestamp="2024-04-21T07:00:54.525Z" hostname="LAPTOP-AJA" tests="7" failures="0" errors="0" skipped="0" time="0.008">
         <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 1 + 2 to equal 3" time="0.003">
         </testcase>
-        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 2 - 1 to equal 1" time="0">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 2 - 1 to equal 1" time="0.001">
         </testcase>
-        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 2 * 3 to equal 6" time="0.001">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 2 * 3 to equal 6" time="0">
         </testcase>
         <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 6 / 2 to equal 3" time="0">
         </testcase>
-        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 6 / 0 to throw an error" time="0.001">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 123 &quot;a&quot; &quot;456&quot; should throw an error" time="0.002">
         </testcase>
-        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 123 + &quot;a&quot; to throw an error" time="0.001">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 123 + &quot;a&quot; should throw an error" time="0">
         </testcase>
-        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 32768 + 1 to throw an error" time="0">
-        </testcase>
-        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 1 + 32768 to throw an error" time="0">
-        </testcase>
-        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 123 &quot;//&quot; 456 to throw an error" time="0">
-        </testcase>
-        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 123 &quot;a&quot; 456 to throw an error" time="0">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; calculate 32768 + -1 should throw an error" time="0">
         </testcase>
     </testsuite>
-    <testsuite name="test/main.test.js" timestamp="2024-04-16T02:00:02.509Z" hostname="LAPTOP-AJA" tests="2" failures="0" errors="0" skipped="0" time="0.007">
+    <testsuite name="test/main.test.js" timestamp="2024-04-21T07:00:54.592Z" hostname="LAPTOP-AJA" tests="2" failures="0" errors="0" skipped="0" time="0.007">
         <testcase classname="test/main.test.js" name="main &gt; should correctly process input and output" time="0.005">
         </testcase>
-        <testcase classname="test/main.test.js" name="main &gt; should handle error correctly" time="0.001">
+        <testcase classname="test/main.test.js" name="main &gt; should handle error correctly" time="0">
         </testcase>
     </testsuite>
-    <testsuite name="test/operations.test.js" timestamp="2024-04-16T02:00:02.512Z" hostname="LAPTOP-AJA" tests="12" failures="0" errors="0" skipped="0" time="0.005">
-        <testcase classname="test/operations.test.js" name="Test add function &gt; adds 1 + 2 to equal 3" time="0.001">
+    <testsuite name="test/operations.test.js" timestamp="2024-04-21T07:00:54.601Z" hostname="LAPTOP-AJA" tests="12" failures="0" errors="0" skipped="0" time="0.006">
+        <testcase classname="test/operations.test.js" name="Test add function &gt; adds 1 + 2 to equal 3" time="0.002">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test add function &gt; adds 123 + 456 to equal 579" time="0.001">
+        <testcase classname="test/operations.test.js" name="Test add function &gt; adds 123 + 456 to equal 579" time="0">
         </testcase>
         <testcase classname="test/operations.test.js" name="Test add function &gt; adds 0 + 0 to equal 0" time="0">
         </testcase>
@@ -39,11 +33,11 @@
         </testcase>
         <testcase classname="test/operations.test.js" name="Test subtract function &gt; subtract 456 - 123 to equal 333" time="0">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test subtract function &gt; subtract 900 - 1000 to equal -100" time="0.001">
+        <testcase classname="test/operations.test.js" name="Test subtract function &gt; subtract 900 - 1000 to equal -100" time="0">
         </testcase>
         <testcase classname="test/operations.test.js" name="Test multiply function &gt; multiply 2 * 3 to equal 6" time="0">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test multiply function &gt; multiply 123 * 456 to equal 56088" time="0">
+        <testcase classname="test/operations.test.js" name="Test multiply function &gt; multiply 123 * 456 to equal 56088" time="0.001">
         </testcase>
         <testcase classname="test/operations.test.js" name="Test multiply function &gt; multiply 0 * 0 to equal 0" time="0">
         </testcase>

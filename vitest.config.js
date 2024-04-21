@@ -14,7 +14,7 @@ export default defineConfig(
                 provider: 'v8',
                 reporter: ['text', 'json', 'html'],
                 reportsDirectory: './html/coverage',
-                exclude: ["index.js", "html"]
+                include: ["src/**/*.js"],
             },
             outputFile: {
                 json: 'test-results.json',
