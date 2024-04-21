@@ -28,7 +28,7 @@ describe('Test main function', () => {
 
     it('Calculate tidak menghasilkan error', async () => {
         const inputs = ['5', '4', '+'];
-        const output = '9';
+        const output = 9;
 
         initiateStdin(inputs);
         calculate.mockReturnValueOnce(output);
