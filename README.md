@@ -23,6 +23,10 @@ Batasan:
 - Rahma Alia Latifa (@erhaemael)
 - Mey Meizia Galtiady (@meymeiziagaltiady)
 
+## Prerequisites
+
+- Node.js 16+
+
 ## Cara Penggunaan
 
 1. Ketikkan perintah berikut pada terminal:

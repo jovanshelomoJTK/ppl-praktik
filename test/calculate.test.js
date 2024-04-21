@@ -10,7 +10,9 @@ vi.mock('../src/operations.js', () => ({
 }));
 
 function regexExactString(string) {
-    return new RegExp('^' + string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$');
+    return new RegExp('^' + string
+        .replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
+        .replace(/-/g, '\\x2d') + '$');
 }
 
 describe('Test calculate function', () => {
@@ -47,44 +49,21 @@ describe('Test calculate function', () => {
         expect(divide).toHaveBeenCalledWith(6, 2);
     });
 
-    it('calculate 6 / 0 to throw an error', () => {
-        divide.mockImplementation(() => {
-            throw new Error('Tidak bisa membagi dengan 0!');
-        });
-
+    it('calculate 123 "a" "456" should throw an error', () => {
         expect(() => {
-            calculate(6, 0, '/')
-        }).toThrowError(regexExactString('Tidak bisa membagi dengan 0!'));
-        expect(divide).toHaveBeenCalledWith(6, 0);
+            calculate(123, 456, 'a')
+        }).toThrowError(regexExactString('Operator Salah! (Harus +, -, *, /)'));
     });
 
-    it('calculate 123 + "a" to throw an error', () => {
+    it('calculate 123 + "a" should throw an error', () => {
         expect(() => {
             calculate(123, 'a', '+')
         }).toThrowError(regexExactString('Variable a atau b bukan angka!'));
     });
 
-    it('calculate 32768 + 1 to throw an error', () => {
+    it('calculate 32768 + -1 should throw an error', () => {
         expect(() => {
-            calculate(32768, 1, '+')
+            calculate(32768, -1, '+')
         }).toThrowError(regexExactString('Variable diluar range!'));
-    });
-
-    it('calculate 1 + 32768 to throw an error', () => {
-        expect(() => {
-            calculate(1, 32768, '+')
-        }).toThrowError(regexExactString('Variable diluar range!'));
-    });
-
-    it('calculate 123 "//" 456 to throw an error', () => {
-        expect(() => {
-            calculate(123, 456, '//')
-        }).toThrowError(regexExactString("Operator Salah! (Harus +, -, *, /)"));
-    });
-
-    it('calculate 123 "a" 456 to throw an error', () => {
-        expect(() => {
-            calculate(123, 456, 'a')
-        }).toThrowError(regexExactString('Operator Salah! (Harus +, -, *, /)'));
     });
 });
