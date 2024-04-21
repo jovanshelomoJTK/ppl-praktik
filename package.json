@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "node ./index.js",
-    "test": "concurrently \"npx vitest\" \"npx vite preview --outDir html\""
+    "test": "npx vitest --ui"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^1.4.0",
