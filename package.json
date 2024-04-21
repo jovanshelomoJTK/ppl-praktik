@@ -4,12 +4,11 @@
   "type": "module",
   "scripts": {
     "start": "node ./index.js",
-    "test": "npx vitest --ui"
+    A
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^1.4.0",
     "@vitest/ui": "^1.4.0",
-    "concurrently": "^8.2.2",
     "deep-clone-fn": "^1.1.0",
     "vitest": "^1.4.0"
   },
