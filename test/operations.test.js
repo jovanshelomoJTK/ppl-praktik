@@ -1,8 +1,8 @@
 import { add, divide, multiply, subtract } from '../src/operations.js'
 import { describe, expect, it } from 'vitest';
 
-describe('Operasi penambahan 2 angka', () => {
-    it('adds 1 + 2 to equal 3', () => {
+describe('Test add function', () => {
+    it('Operasi penambahan 2 angka', () => {
         expect(add(1, 2)).toBe(3);
     });
 });
@@ -35,8 +35,8 @@ describe('Test multiply function', () => {
     });
 })
 
-describe('Operasi pembagian 2 angka', () => {
-    it('divide 6 / 2 to equal 3', () => {
+describe('Test divide function', () => {
+    it('Operasi pembagian 2 angka', () => {
         expect(divide(6, 2)).toBe(3);
     });
 
