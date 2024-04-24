@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="9" failures="0" errors="0" time="2373.834">
-    <testsuite name="test/operations.test.js" timestamp="2024-04-21T09:28:46.553Z" hostname="Rahma" tests="9" failures="0" errors="0" skipped="0" time="0.019">
-        <testcase classname="test/operations.test.js" name="Test add function &gt; Operasi penambahan 2 angka" time="0.003">
+<testsuites name="vitest tests" tests="14" failures="0" errors="0" time="1.998">
+    <testsuite name="test/calculate.test.js" timestamp="2024-04-24T08:43:55.328Z" hostname="LAPTOP-AJA" tests="7" failures="0" errors="0" skipped="0" time="0.012">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; Operasi pertambahan 2 angka" time="0.004">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test subtract function &gt; subtract 2 - 1 to equal 1" time="0.001">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; Operasi pengurangan 2 angka" time="0">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test subtract function &gt; subtract 456 - 123 to equal 333" time="0.001">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; Operasi perkalian 2 angka" time="0">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test subtract function &gt; subtract 900 - 1000 to equal -100" time="0.001">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; Operasi pembagian 2 angka" time="0.001">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test multiply function &gt; multiply 2 * 3 to equal 6" time="0.001">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; Operator salah" time="0.002">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test multiply function &gt; multiply 123 * 456 to equal 56088" time="0.001">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; Operand bukan angka" time="0.001">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test multiply function &gt; multiply 0 * 0 to equal 0" time="0.001">
+        <testcase classname="test/calculate.test.js" name="Test calculate function &gt; Operand yang dimasukan melebihi range" time="0">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test divide function &gt; Operasi pembagian 2 angka" time="0.001">
+    </testsuite>
+    <testsuite name="test/main.test.js" timestamp="2024-04-24T08:43:55.381Z" hostname="LAPTOP-AJA" tests="2" failures="0" errors="0" skipped="0" time="0.011">
+        <testcase classname="test/main.test.js" name="Test main function &gt; Calculate tidak menghasilkan error" time="0.007">
         </testcase>
-        <testcase classname="test/operations.test.js" name="Test divide function &gt; Operasi pembagian dengan pembilang nol" time="0.007">
+        <testcase classname="test/main.test.js" name="Test main function &gt; Calculate menghasilkan error" time="0.001">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/operations.test.js" timestamp="2024-04-24T08:43:55.390Z" hostname="LAPTOP-AJA" tests="5" failures="0" errors="0" skipped="0" time="0.005">
+        <testcase classname="test/operations.test.js" name="Test add function &gt; Operasi penambahan 2 angka" time="0.002">
+        </testcase>
+        <testcase classname="test/operations.test.js" name="Test subtract function &gt; Operasi pengurangan 2 angka" time="0.001">
+        </testcase>
+        <testcase classname="test/operations.test.js" name="Test multiply function &gt; Operasi perkalian 2 angka" time="0">
+        </testcase>
+        <testcase classname="test/operations.test.js" name="Test divide function &gt; Operasi pembagian 2 angka" time="0">
+        </testcase>
+        <testcase classname="test/operations.test.js" name="Test divide function &gt; Operasi pembagian dengan penyebut nol" time="0.001">
         </testcase>
     </testsuite>
 </testsuites>

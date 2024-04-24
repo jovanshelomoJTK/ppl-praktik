@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for operations.js</title>
+    <title>Code coverage report for main.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> operations.js</h1>
+        <h1><a href="index.html">All files</a> main.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -32,14 +32,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -83,37 +83,37 @@
 <a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">export function add(a, b) {
-    return a + b
-}
+<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">import { calculate } from './calculate.js';
 &nbsp;
-export function subtract(a, b) {
-    return a - b
-}
+export async function main() {
+    const stdinIterator = process.stdin.iterator()
 &nbsp;
-export function multiply(a, b) {
-    return a * b
-}
+    process.stdout.write("Masukkan angka pertama: ");
+    const input1 = ((await stdinIterator.next()).value).toString().trim()
+    process.stdout.write("Masukkan angka kedua: ");
+    const input2 = ((await stdinIterator.next()).value).toString().trim()
+    process.stdout.write("Masukkan operator (+, -, *, /): ");
+    const operator = ((await stdinIterator.next()).value).toString().trim()
 &nbsp;
-export function divide(a, b) {
-    if (b === 0) { // jika penyebut = 0
-        throw new Error("Tidak bisa membagi dengan 0!")
+    try {
+        process.stdout.write("hasil: " + calculate(input1, input2, operator) + "\n")
+    } catch (error) {
+        process.stdout.write(error.message + "\n")
     }
-    return a / b
 }</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

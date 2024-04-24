@@ -24,7 +24,7 @@ describe('Test divide function', () => {
         expect(divide(6, 2)).toBe(3);
     });
 
-    it('Operasi pembagian dengan pembilang nol', () => {
+    it('Operasi pembagian dengan penyebut nol', () => {
         expect(() => {
             divide(6, 0)
         }).toThrowError('Tidak bisa membagi dengan 0!');
